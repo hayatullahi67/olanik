@@ -19,7 +19,7 @@ const LogosCarousel: React.FC = () => {
       <div className=" ">
         <div className="">
           <img
-            src="/src/assets/image16.png"
+            src="/image16.png"
             alt="Company Logos"
             className="w-full h-[80px] "
           />

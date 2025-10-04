@@ -98,7 +98,7 @@ const About: React.FC = () => {
                     variants={imageVariants}
                 >
                     <img
-                        src="/src/assets/about-section.png"
+                        src="/about-section.png"
                         alt="About Olanik - Design Philosophy"
                         className="w-full max-w-4xl h-auto"
                     />

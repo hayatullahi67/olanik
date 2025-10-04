@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                         <div className="flex items-center">
                             <div className="flex items-center">
                                 <img 
-                                    src="/src/assets/olanik-logo.png" 
+                                    src="/olanik-logo.png" 
                                     alt="Olanik Logo" 
                                     className="h-6 sm:h-7 md:h-8 w-auto"
                                 />

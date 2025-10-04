@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
       {/* CTA Section with Background Image */}
       <motion.div
         className="relative bg-cover bg-center bg-no-repeat mx-4 sm:mx-8 lg:mx-16 rounded-3xl overflow-hidden"
-        style={{ backgroundImage: 'url("/src/assets/footer-bg.png")' }}
+        style={{ backgroundImage: 'url("/footer-bg.png")' }}
         variants={ctaVariants}
         initial="hidden"
         whileInView="visible"
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
             >
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/olanik-logo.png"
+                  src="/olanik-logo.png"
                   alt="Olanik"
                   className="h-8 w-auto mr-3"
                 />

@@ -7,28 +7,28 @@ const Works: React.FC = () => {
             id: 1,
             title: 'TechGrid',
             description: 'Full web development for a Software company',
-            image: '/src/assets/project1.png',
+            image: '/project1.png',
             category: 'Web Development'
         },
         {
             id: 2,
             title: 'Ovote System',
             description: 'Web Application',
-            image: '/src/assets/project2.png',
+            image: '/project2.png',
             category: 'Web Development'
         },
         {
             id: 3,
             title: 'Ceadese',
             description: 'Web Application',
-            image: '/src/assets/project3.png',
+            image: '/project3.png',
             category: 'Web Development'
         },
         {
             id: 4,
             title: 'FCE Award Voting System',
             description: 'Web Application',
-            image: '/src/assets/project1.png',
+            image: '/project1.png',
             category: 'Web Development'
         }
     ];

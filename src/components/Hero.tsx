@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
           variants={imageVariants}
         >
           <img
-            src="/src/assets/dashboard-screenshot.png"
+            src="/dashboard-screenshot.png"
             alt="Support Ticket Dashboard Preview"
             className="w-full h-auto rounded-lg shadow-2xl"
           />
