@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import ProjectModal from './ProjectModal';
 
 const Footer: React.FC = () => {
+  const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -71,9 +74,14 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsProjectModalOpen(true)}
           >
             Start a project
           </motion.button>
+          <ProjectModal
+            isOpen={isProjectModalOpen}
+            onClose={() => setIsProjectModalOpen(false)}
+          />
         </div>
       </motion.div>
 

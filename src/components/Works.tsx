@@ -82,7 +82,7 @@ const Works: React.FC = () => {
     };
 
     return (
-        <div className="bg-[#FAFAFA] py-16 sm:py-20 lg:py-24 font-['Inter']">
+        <div id="works" className="bg-[#FAFAFA] py-16 sm:py-20 lg:py-24 font-['Inter']">
             <motion.div 
                 className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
                 variants={containerVariants}
@@ -182,13 +182,12 @@ const Works: React.FC = () => {
                     className="text-center"
                     variants={itemVariants}
                 >
-                    <motion.button 
-                        className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-colors duration-200"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                    <a
+                        href="/projects"
+                        className="inline-block bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-colors duration-200"
                     >
                         View more projects
-                    </motion.button>
+                    </a>
                 </motion.div>
             </motion.div>
         </div>

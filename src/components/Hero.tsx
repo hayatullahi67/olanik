@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
+// import ContactModal from './ContactModal';
+import ContactModal from './ContactModal.tsx';
 const Hero: React.FC = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const contactButtonRef = useRef<HTMLButtonElement | null>(null);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -97,17 +100,32 @@ const Hero: React.FC = () => {
             className="px-8 py-3 border border-gray-300 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const el = document.getElementById('works');
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
           >
             View our Works
           </motion.button>
           <motion.button
+            ref={contactButtonRef}
+            onClick={() => setIsContactOpen(true)}
             className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            aria-haspopup="dialog"
+            aria-expanded={isContactOpen}
           >
             Get in touch
           </motion.button>
         </motion.div>
+
+        {/* Contact modal */}
+        <ContactModal
+          isOpen={isContactOpen}
+          onClose={() => setIsContactOpen(false)}
+          returnFocusRef={contactButtonRef}
+        />
 
         {/* Dashboard Image */}
         <motion.div

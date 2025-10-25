@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import ContactModal from './ContactModal';
 
 const About: React.FC = () => {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+    const contactButtonRef = useRef<HTMLButtonElement | null>(null);
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -110,12 +114,21 @@ const About: React.FC = () => {
                     variants={itemVariants}
                 >
                     <motion.button 
+                        ref={contactButtonRef}
+                        onClick={() => setIsContactOpen(true)}
                         className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors duration-200"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        aria-haspopup="dialog"
+                        aria-expanded={isContactOpen}
                     >
                         Get in touch
                     </motion.button>
+                    <ContactModal
+                        isOpen={isContactOpen}
+                        onClose={() => setIsContactOpen(false)}
+                        returnFocusRef={contactButtonRef}
+                    />
                 </motion.div>
             </motion.div>
         </div>
