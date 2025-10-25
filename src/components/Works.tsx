@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Works: React.FC = () => {
     const projects = [
@@ -182,12 +183,12 @@ const Works: React.FC = () => {
                     className="text-center"
                     variants={itemVariants}
                 >
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className="inline-block bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-colors duration-200"
                     >
                         View more projects
-                    </a>
+                    </Link>
                 </motion.div>
             </motion.div>
         </div>
